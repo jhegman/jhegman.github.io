@@ -1,7 +1,382 @@
+
+/*--------------------------------------------------------------
+# Imports
+--------------------------------------------------------------*/
+
 //Normalize
 @import './node_modules/normalize-scss/sass/normalize';
 @include normalize();
 
-//Bootstrap 4 Grid
-@import './node_modules/bootstrap/scss/bootstrap-grid';
-@import './node_modules/bootstrap/scss/utilities/flex';
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//Fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+
+/*--------------------------------------------------------------
+# Main Content
+--------------------------------------------------------------*/
+html{
+	height:100%;
+}
+
+body{
+	overflow: hidden;
+	background-color: #274046;
+}
+
+.main-wrap{
+        height:100vh;
+        position: relative;
+}
+
+.name{
+         color: white;
+         top: 10vh;
+         position: absolute;
+         z-index: 900;
+         width:100%;
+         text-align: center;
+         font-family: Georgia, Serif;
+         -webkit-font-smoothing: antialiased;
+
+         h1{
+            font-size: 3em;
+            margin-bottom: 0px;
+         }   
+}
+
+.layer-background{
+     height: 100%;
+    width:100%;
+    position:absolute;
+}
+
+.background-1{
+    background: #B993D6;
+    background: -moz-linear-gradient(45deg,#B993D6 0,#274046 41%,#274046 52%,#274046 73%,#274046 100%);
+    background: -webkit-linear-gradient(45deg,#B993D6 0,#274046 41%,#274046 52%,#274046 73%,#274046 100%);
+    background: linear-gradient(45deg,#B993D6 0,#274046 41%,#274046 52%,#274046 73%,#274046 100%);
+    background-size: 150% 150%;
+    -webkit-animation: Corner 8s ease infinite;
+    -moz-animation: Corner 8s ease infinite;
+    animation: Corner 8s ease infinite;
+    opacity: .82;
+    z-index: 890;
+
+}
+
+.background-2{
+   background: #274046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #274046, #274046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #274046, #274046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: .7;
+    background-size: 100% 100%;
+    -webkit-animation: Wave 8s ease infinite;
+    -moz-animation: Wave 8s ease infinite;
+    animation: Wave 8s ease infinite;
+    background-position: 20% 50%;
+    z-index: 880;
+}
+
+.head{
+	background-image:url('/headshot.png');
+	width: 100vh;
+    	height: 80vh;
+    	float: right;
+    	top: 20vh;
+    	background-size: cover;
+            position:relative;
+}
+
+#particles-js{
+    z-index: 901;
+}
+
+
+@-webkit-keyframes move{
+    0%{-webkit-transform: translateX(3px);}
+    50%{-webkit-transform: translateX(-1px)}
+    100%{-webkit-transform: translateX(3px);}
+}
+ 
+@keyframes move{
+    0%{transform: translateX(3px);}
+    50%{transform: translateX(-1px)}
+    100%{transform: translateX(3px);}
+}
+ 
+.moving{
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: move 4s ease-in-out forwards infinite;
+    animation: move 4s ease-in-out forwards infinite;
+}
+
+@-webkit-keyframes Wave{
+0%,100%{opacity:1}
+50%{opacity:.7}
+}
+
+@-moz-keyframes Wave{
+0%,100%{opacity:1}
+50%{opacity:.7}
+}
+
+@keyframes Wave{
+0%,100%{opacity:.8}
+50%{opacity:.1}
+}
+
+@-webkit-keyframes Corner{
+0%,100%{background-position:0 0}
+50%{background-position:100% 50%}
+}
+
+@-moz-keyframes Corner{
+0%,100%{background-position:0 0}
+50%{background-position:100% 50%}
+}
+
+@keyframes Corner{
+0%,100%{background-position:0 0}
+50%{background-position:100% 50%}
+}
+
+/*--------------------------------------------------------------
+# Modal
+--------------------------------------------------------------*/
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1D4350;
+    opacity: .97;   
+    display: table;
+    transition: opacity .3s ease;
+}
+
+.modal-wrapper {
+    @media screen and (min-width: $screen-sm) {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.modal-container {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0 2px 2px 0 rgba(2, 2, 2, 0.1);
+    transition: all .3s ease;
+}
+
+.modal-enter {
+    opacity: 0;
+}
+
+
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.modal-nav{
+    text-align: center;
+    color: white;
+    list-style: none;
+    width: 100%;
+
+    a{
+        color: #F7F7F7;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 48px;
+        font-family: 'Roboto Condensed', raleways,sans-serif;
+        line-height: 2;
+        letter-spacing: 4px;
+        transition: all .3s ease;
+        -webkit-font-smoothing: antialiased;
+        font-weight: lighter;
+        cursor: pointer;
+        position: relative;
+    }
+
+    a:hover{
+        letter-spacing: 6px;
+    }
+
+a:before, a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #fff;
+}
+
+a:before {
+  left: -2.5px;
+}
+a:after {
+  right: 2.5px;
+  background: #fff;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+a:hover:before {
+  background: #fff;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+a:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+}
+
+/*--------------------------------------------------------------
+# Hamburger / X Icon
+--------------------------------------------------------------*/
+
+.hamburger{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 99999;
+    margin: 25px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .7s ease-in-out;
+    -moz-transition: .7s ease-in-out;
+    -o-transition: .7s ease-in-out;
+    transition: .7s ease-in-out;
+    cursor: pointer;
+
+    .line{
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+   -webkit-transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -webkit-transition: .25s ease-in-out;
+   -moz-transition: .25s ease-in-out;
+   -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    cursor: pointer;
+    }
+
+    .menu{
+        display: block;
+        position:absolute;
+        color: white;
+        top: 42px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.line:first-child{
+    top: 0px;
+    width: 80%;
+    right: 0%;
+    -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.line:nth-child(2){
+    top: 14px;
+    width: 65%;
+    -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.line:nth-child(3){
+    top: 28px;
+    width: 40%;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    right: 0%;
+}
+
+.hamburger:hover{
+    .line:first-child{
+    width: 100%;
+    }
+
+    .line:nth-child(2){
+    width: 100%;
+    }
+
+    .line:nth-child(3){
+    width: 100%;
+}
+
+}
+
+.open{
+    .line{
+        width:100%;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .line:nth-child(1){
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: -3px;
+        left: 8px;
+    }
+
+    .line:nth-child(2){
+            width: 0%;
+            opacity: 0;
+    }
+
+    .line:nth-child(3){
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 39px;
+        left: 8px;
+    }
+
+}

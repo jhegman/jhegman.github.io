@@ -1,1 +1,55 @@
-Hello World
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> Jack Hegman </title>
+ <meta name="Jack Hegman">
+
+  <link rel="stylesheet" href="public/css/app.css">
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.png' />
+</head>
+
+<body>
+<div id="app">
+    <div v-bind:class="{ open: showModal }" class="hamburger" @click="showModal = !showModal">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="menu">MENU</span>
+    </div>
+    <div class="main-wrap">
+        <div id="particles-js" class="layer-background"></div>
+        <div class="name">
+            <h1> Jack Hegman </h1>
+            <h2> Web Developer </h2>
+        </div>
+        <div class="background-1 layer-background"></div>
+        <div class="background-2 layer-background"></div>
+        <div class="background-3 moving">
+            <div class="container head"></div>
+        </div>
+    </div>
+    <!--/main-wrap-->
+    <modal v-if="showModal" @modal-closed="showModal = false" v-cloak>
+        <div slot="body">
+            <ul class="modal-nav">
+                <li> 
+                    <a href="#">Work</a>
+                </li>
+                <li>
+                    <a href="#"> Contact </a>
+                </li>
+                <li>
+                    <a href="#"> Github </a>
+                </li>
+            </ul>
+        </div>
+    </modal>
+
+</div>
+<!--/app-->
+<script src="public/js/app.js"></script>
+</body>
+
+</html>
