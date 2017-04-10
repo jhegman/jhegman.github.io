@@ -8171,6 +8171,10 @@ body {
   background-color: #274046;
 }
 
+body #app {
+  overflow: hidden;
+}
+
 .main-wrap {
   height: 100vh;
   position: relative;
@@ -8185,6 +8189,12 @@ body {
   text-align: center;
   font-family: Georgia, Serif;
   -webkit-font-smoothing: antialiased;
+}
+
+@media screen and (max-width: 768px) {
+  .name {
+    top: 40vh;
+  }
 }
 
 .name h1 {
@@ -8326,11 +8336,9 @@ body {
   transition: opacity .3s ease;
 }
 
-@media screen and (min-width: 768px) {
-  .modal-wrapper {
-    display: table-cell;
-    vertical-align: middle;
-  }
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .modal-container {
@@ -8365,6 +8373,7 @@ body {
   color: white;
   list-style: none;
   width: 100%;
+  padding-left: 0px;
 }
 
 .modal-nav a {

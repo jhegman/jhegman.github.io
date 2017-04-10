@@ -23,6 +23,10 @@ html{
 body{
 	overflow: hidden;
 	background-color: #274046;
+
+            #app{
+                overflow:hidden;
+            }
 }
 
 .main-wrap{
@@ -40,10 +44,15 @@ body{
          font-family: Georgia, Serif;
          -webkit-font-smoothing: antialiased;
 
+         @media screen and (max-width: $screen-sm) {
+              top: 40vh;
+            }   
+
          h1{
             font-size: 3em;
             margin-bottom: 0px;
-         }   
+         }
+
 }
 
 .layer-background{
@@ -160,10 +169,8 @@ body{
 }
 
 .modal-wrapper {
-    @media screen and (min-width: $screen-sm) {
         display: table-cell;
         vertical-align: middle;
-    }
 }
 
 .modal-container {
@@ -198,6 +205,7 @@ body{
     color: white;
     list-style: none;
     width: 100%;
+    padding-left: 0px;
 
     a{
         color: #F7F7F7;
