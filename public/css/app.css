@@ -8655,8 +8655,10 @@ body #app {
 @media screen and (max-width: 768px) {
   .work {
     width: 90%;
-    margin-top: 20% p;
-    margin-top-width: 95%;
+    margin-top: 20%;
+  }
+  .work p {
+    width: 95%;
   }
 }
 
