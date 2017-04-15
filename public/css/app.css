@@ -12,6 +12,7 @@
      *    IE on Windows Phone and in iOS.
      */
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,600);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -8175,31 +8176,46 @@ body #app {
   overflow: hidden;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .main-wrap {
   height: 100vh;
   position: relative;
 }
 
+.home-icon {
+  margin: 25px auto;
+  z-index: 9999;
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
+
 .name {
   color: white;
-  top: 10vh;
+  top: 40vh;
+  left: 10vw;
   position: absolute;
   z-index: 900;
-  width: 100%;
-  text-align: center;
-  font-family: Georgia, Serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-@media screen and (max-width: 768px) {
-  .name {
-    top: 40vh;
-  }
+.name h1 {
+  font-size: 4em;
+  margin-bottom: 0px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.name h1 {
-  font-size: 3em;
-  margin-bottom: 0px;
+.name span {
+  font-weight: 300;
+  display: block;
+  margin-top: 5px;
+  font-size: 16px;
 }
 
 .layer-background {
@@ -8332,8 +8348,6 @@ body #app {
   background-color: #1D4350;
   opacity: .97;
   display: table;
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
 }
 
 .modal-wrapper {
@@ -8350,22 +8364,17 @@ body #app {
   padding: 20px;
   border-radius: 3px;
   box-shadow: 0 2px 2px 0 rgba(2, 2, 2, 0.1);
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
 }
 
-.modal-enter {
+.slide-enter-active, .slide-leave-active {
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+}
+
+.slide-enter, .slide-leave-to {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
   opacity: 0;
-}
-
-.modal-leave-active {
-  opacity: 0;
-}
-
-.modal-enter .modal-container,
-.modal-leave-active .modal-container {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .modal-nav {
@@ -8534,6 +8543,132 @@ body #app {
   transform: rotate(-45deg);
   top: 39px;
   left: 8px;
+}
+
+/*--------------------------------------------------------------
+# Work
+--------------------------------------------------------------*/
+.work-wrap {
+  z-index: 902;
+  background-color: #1a1818;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: absolute;
+}
+
+.work {
+  width: 70%;
+  max-width: 880px;
+  height: 70%;
+  border: 5px solid #1D4350;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+}
+
+.work h1 {
+  margin: 10% auto 5px 5%;
+  letter-spacing: 2px;
+  color: #F7F7F7;
+}
+
+.work span:before {
+  height: 2px;
+  width: 25px;
+  background: #AB8E60;
+  content: "";
+  display: block;
+  float: left;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.work p {
+  margin: 10px auto auto 5%;
+  width: 60%;
+  color: #F7F7F7;
+}
+
+.work ul {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  margin-left: 5%;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.work li {
+  margin-right: 10px;
+}
+
+.work li a {
+  color: #484848;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.work li a:hover {
+  color: #AB8E60;
+}
+
+.work .router-link-active {
+  color: #AB8E60;
+}
+
+.work .link {
+  margin: 10px 0 0 5%;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  border: 1px solid rgba(247, 247, 247, 0.1);
+  display: block;
+  text-align: center;
+  width: 140px;
+  text-decoration: none;
+  color: #F7F7F7;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  letter-spacing: 2px;
+}
+
+.work .link:hover {
+  background-color: #F7F7F7;
+  color: #AB8E60;
+}
+
+.tag-line {
+  margin-left: 5%;
+  display: block;
+  color: #AB8E60;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .work {
+    width: 90%;
+    margin-top: 20% p;
+    margin-top-width: 95%;
+  }
+}
+
+.work-slide-enter-active {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.work-slide-enter {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 /*# sourceMappingURL=app.css.map */

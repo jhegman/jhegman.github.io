@@ -14,41 +14,32 @@
 
 <body>
 <div id="app">
+<router-link to="/" @click.native="showModal = false" exact>
+    <img class="home-icon" src="/home_icon.svg"/>
+</router-link>
+<div id="particles-js" class="layer-background"></div>
     <div v-bind:class="{ open: showModal }" class="hamburger" @click="showModal = !showModal">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
         <span class="menu">MENU</span>
     </div>
-    <div class="main-wrap">
-        <div id="particles-js" class="layer-background"></div>
-        <div class="name">
-            <h1> Jack Hegman </h1>
-            <h2> Web Developer </h2>
-        </div>
-        <div class="background-1 layer-background"></div>
-        <div class="background-2 layer-background"></div>
-        <div class="background-3 moving">
-            <div class="container head"></div>
-        </div>
-    </div>
-    <!--/main-wrap-->
-    <modal v-if="showModal" @modal-closed="showModal = false" v-cloak>
+    <modal v-if="showModal" v-cloak>
         <div slot="body">
-            <ul class="modal-nav">
+             <ul class="modal-nav">
                 <li> 
-                    <a href="#">Work</a>
+                    <router-link to="/work" @click.native="showModal = false">Portfolio</router-link>
                 </li>
                 <li>
-                    <a href="#"> Contact </a>
+                    <a href="mailto:jack.hegman@gmail.com"> Contact </a>
                 </li>
                 <li>
-                    <a href="#"> Github </a>
+                    <a href="https://github.com/jhegman" target="_blank"> Github </a>
                 </li>
             </ul>
         </div>
     </modal>
-
+    <router-view></router-view>
 </div>
 <!--/app-->
 <script src="public/js/app.js"></script>

@@ -1,8 +1,8 @@
 <template>
-    <transition name="modal">
+    <transition name="slide">
         <div class="modal-mask">
             <div class="modal-wrapper">
-                        <slot name="body"></slot>
+                    <slot name="body"></slot>
             </div>
         </div>
     </transition>
