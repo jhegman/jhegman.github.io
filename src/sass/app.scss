@@ -421,10 +421,8 @@ a:hover:after {
 .work{
   width: 70%;
   max-width: 880px;
-  height: 70%;
   border: 5px solid #1D4350;
   font-family: 'Raleway', sans-serif;
-  position: relative;
 
   h1{
       margin: 10% auto 5px 5%;
@@ -453,8 +451,8 @@ a:hover:after {
     list-style: none;
     display:inline-flex;
     margin-left: 5%;
+    margin-top: 10%;
     padding: 0;
-    position: absolute;
     bottom: 0;
   }
 
@@ -528,6 +526,10 @@ a:hover:after {
     }
     h1{
       margin-top: 0px;
+    }
+
+    ul{
+      margin-top: 5%;
     }
   }
 }

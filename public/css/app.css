@@ -8571,10 +8571,8 @@ body #app {
 .work {
   width: 70%;
   max-width: 880px;
-  height: 70%;
   border: 5px solid #1D4350;
   font-family: 'Raleway', sans-serif;
-  position: relative;
 }
 
 .work h1 {
@@ -8605,8 +8603,8 @@ body #app {
   display: -webkit-inline-box;
   display: inline-flex;
   margin-left: 5%;
+  margin-top: 10%;
   padding: 0;
-  position: absolute;
   bottom: 0;
 }
 
@@ -8679,6 +8677,9 @@ body #app {
   }
   .work h1 {
     margin-top: 0px;
+  }
+  .work ul {
+    margin-top: 5%;
   }
 }
 
