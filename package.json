@@ -8,21 +8,21 @@
     "bootstrap-sass": "^3.3.7",
     "gulp": "^3.9.1",
     "gulp-util": "^3.0.8",
-    "jquery": "^3.1.0",
-    "laravel-elixir": "^6.0.0-14",
+    "jquery": "^3.3.1",
+    "laravel-elixir": "^6.0.0-17",
     "laravel-elixir-vue-2": "^0.2.0",
     "laravel-elixir-webpack-official": "^1.0.2",
-    "lodash": "^4.16.2",
-    "vue": "^2.0.1",
-    "vue-resource": "^1.0.3",
-    "vue-template-compiler": "^2.1.10",
-    "particlesjs": "^2.0.2"
+    "lodash": "^4.17.5",
+    "particlesjs": "^2.2.2",
+    "vue": "^2.5.16",
+    "vue-resource": "^1.5.0",
+    "vue-template-compiler": "^2.5.16"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "jquery": "^3.1.1",
+    "laravel-mix": "^2.1.11",
     "normalize-scss": "^6.0.0",
-    "particlesjs": "^2.0.2",
-    "vue-router": "^2.4.0"
+    "particles.js": "^2.0.0",
+    "vue-router": "^2.8.1"
   }
 }

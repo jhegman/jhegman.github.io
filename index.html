@@ -14,34 +14,38 @@
 
 <body>
 <div id="app">
-<router-link to="/" @click.native="showModal = false" exact>
-    <img class="home-icon" src="/home_icon.svg"/>
-</router-link>
+<div class="route" v-bind:class=" $route.name "></div>
 <div id="particles-js" class="layer-background"></div>
-    <div v-bind:class="{ open: showModal }" class="hamburger" @click="showModal = !showModal">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="menu">MENU</span>
-    </div>
-    <modal v-if="showModal" v-cloak>
-        <div slot="body">
-             <ul class="modal-nav">
-                <li> 
-                    <router-link to="/work" @click.native="showModal = false">Portfolio</router-link>
-                </li>
-                <li>
-                    <a href="mailto:jack.hegman@gmail.com"> Contact </a>
-                </li>
-                <li>
-                    <a href="https://github.com/jhegman" target="_blank"> Github </a>
-                </li>
-            </ul>
-        </div>
-    </modal>
+    <div class="container">
+        <header class="nav-icons">
+            <router-link to="/" @click.native="showModal = false" exact>
+                <img class="home-icon" src="/home_icon.svg"/>
+            </router-link>
+            <div v-bind:class="{ open: showModal }" class="hamburger" @click="showModal = !showModal">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="menu">MENU</span>
+            </div>
+        </header>
+        <modal v-if="showModal" v-cloak>
+            <div slot="body">
+                 <ul class="modal-nav">
+                    <li> 
+                        <router-link to="/work" @click.native="showModal = false">Portfolio</router-link>
+                    </li>
+                    <li>
+                        <a href="mailto:jack.hegman@gmail.com">Contact</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jhegman" target="_blank">Github</a>
+                    </li>
+                </ul>
+            </div>
+        </modal>
     <router-view></router-view>
-</div>
-<!--/app-->
+    </div><!--/.container-->
+</div><!--/app-->
 <script src="public/js/app.js"></script>
 </body>
 

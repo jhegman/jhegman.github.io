@@ -5,8 +5,12 @@ import Home from './components/Home.vue';
 import Gold from './components/Gold.vue';
 const particles = require('particles.js');
 
+Vue.config.devtools = false;
+Vue.config.debug = false;
+Vue.config.silent = true;
+Vue.config.productionTip = false;
+
 particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
 });
 
 Vue.component('modal', require('./components/Modal.vue'));
@@ -15,9 +19,9 @@ Vue.use(VueRouter);
 
 var router = new VueRouter({
   routes: [
-    { path: '/work', component: Work },
-    { path: '/', component: Home },
-    { path: '/gold', component: Gold },
+    { path: '/work', name: 'work-route', component: Work },
+    { path: '/', name: 'home-route', component: Home },
+    { path: '/gold', name: 'gold-route', component: Gold },
     { path: '*', redirect: '/' },
 ]
 });

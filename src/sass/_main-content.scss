@@ -1,0 +1,156 @@
+/*--------------------------------------------------------------
+# Main Content
+--------------------------------------------------------------*/
+#app {
+	overflow: hidden;
+}
+
+body {
+	background-color: #274046;
+}
+
+[v-cloak] {
+	display: none;
+}
+
+.container {
+	padding-top: 20px;
+}
+
+.main-wrap {
+	height:100vh;
+}
+
+.home-icon {
+	z-index: 9999;
+}
+
+.name {
+	color: white;
+	top: 40vh;
+	left: 10vw;
+	position: absolute;
+	z-index: 900;
+	font-family: 'Raleway', sans-serif;
+	-webkit-font-smoothing: antialiased;  
+
+	h1 {
+		font-size: 4em;
+		margin-bottom: 0px;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	span {
+		font-weight: 300;
+		display: block;
+		margin-top: 5px;
+		font-size: 16px;
+	}
+
+}
+
+.layer-background {
+	height: 100%;
+	width:100%;
+	position:fixed;
+	top:0;
+	left: 0;
+}
+
+.background-1 {
+	background: #B993D6;
+	background: -moz-linear-gradient(45deg,#B993D6 0,#274046 41%,#274046 52%,#274046 73%,#274046 100%);
+	background: -webkit-linear-gradient(45deg,#B993D6 0,#274046 41%,#274046 52%,#274046 73%,#274046 100%);
+	background: linear-gradient(45deg,#B993D6 0,#274046 41%,#274046 52%,#274046 73%,#274046 100%);
+	background-size: 150% 150%;
+	-webkit-animation: Corner 8s ease infinite;
+	-moz-animation: Corner 8s ease infinite;
+	animation: Corner 8s ease infinite;
+	opacity: .82;
+	z-index: 890;
+
+}
+
+.background-2 {
+	background: #274046;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #274046, #274046);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #274046, #274046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	opacity: .7;
+	background-size: 100% 100%;
+	-webkit-animation: Wave 8s ease infinite;
+	-moz-animation: Wave 8s ease infinite;
+	animation: Wave 8s ease infinite;
+	background-position: 20% 50%;
+	z-index: 880;
+}
+
+.head {
+	background-image:url('/headshot.png');
+	width: 100vh;
+	height: 80vh;
+	float: right;
+	top: 20vh;
+	background-size: cover;
+	position:relative;
+}
+
+@media screen and (max-width: 768px) {
+	.head {
+		float: none;
+	}
+}
+
+#particles-js {
+	z-index: 901;
+}
+
+
+@-webkit-keyframes move {
+	0%{-webkit-transform: translateX(3px);}
+	50%{-webkit-transform: translateX(-1px)}
+	100%{-webkit-transform: translateX(3px);}
+}
+ 
+@keyframes move {
+	0%{transform: translateX(3px);}
+	50%{transform: translateX(-1px)}
+	100%{transform: translateX(3px);}
+}
+ 
+.moving {
+	-webkit-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-animation: move 4s ease-in-out forwards infinite;
+	animation: move 4s ease-in-out forwards infinite;
+}
+
+@-webkit-keyframes Wave {
+	0%,100%{opacity:1}
+	50%{opacity:.7}
+}
+
+@-moz-keyframes Wave {
+	0%,100%{opacity:1}
+	50%{opacity:.7}
+}
+
+@keyframes Wave {
+	0%,100%{opacity:.8}
+	50%{opacity:.1}
+}
+
+@-webkit-keyframes Corner {
+	0%,100%{background-position:0 0}
+	50%{background-position:100% 50%}
+}
+
+@-moz-keyframes Corner {
+	0%,100%{background-position:0 0}
+	50%{background-position:100% 50%}
+}
+
+@keyframes Corner {
+	0%,100%{background-position:0 0}
+	50%{background-position:100% 50%}
+}
