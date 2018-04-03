@@ -14,7 +14,7 @@
                         <h5>2015</h5>
                         <h4>Client</h4>
                         <h5>Sun Valley SEF</h5>
-                        <a href="https://fantasyews.com" class="link" target="_blank"> View Project </a>
+                        <a href="http://www.xcgold.svsef.org" class="link" target="_blank"> View Project </a>
                     </div>
                 </div>
                 <ul class="route-nav">
