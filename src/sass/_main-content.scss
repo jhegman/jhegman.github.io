@@ -82,18 +82,19 @@
 }
 
 .head {
-	background-image:url('/headshot.png');
-	width: 100vh;
-	height: 80vh;
-	float: right;
-	top: 20vh;
-	background-size: cover;
-	position:relative;
+	display: flex;
+	justify-content: flex-end;
+
+	img {
+		height: 80vh;
+		top: 20vh;
+		position: relative;
+	}
 }
 
 @media screen and (max-width: 768px) {
 	.head {
-		float: none;
+		justify-content: center;
 	}
 }
 

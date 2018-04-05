@@ -2,7 +2,7 @@
 # Modal
 --------------------------------------------------------------*/
 .modal-mask {
-	position: fixed;
+	position: absolute;
 	z-index: 9998;
 	top: 0;
 	left: 0;
@@ -10,23 +10,9 @@
 	height: 100%;
 	background-color: #1D4350;
 	opacity: .97;   
-	display: table;
-}
-
-.modal-wrapper {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.modal-container {
-	position: absolute;
-	top: 20px;
-	bottom: 20px;
-	left: 20px;
-	right: 20px;
-	padding: 20px;
-	border-radius: 3px;
-	box-shadow: 0 2px 2px 0 rgba(2, 2, 2, 0.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .slide-enter-active, .slide-leave-active {
@@ -59,7 +45,7 @@
 		cursor: pointer;
 		position: relative;
 
-		&:hover{
+		&:hover {
 			letter-spacing: 6px;
 		}
 	}
