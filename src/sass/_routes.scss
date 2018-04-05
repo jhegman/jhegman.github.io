@@ -1,19 +1,21 @@
 /*--------------------------------------------------------------
 # Route BG Images
 --------------------------------------------------------------*/
-
-.route {
-	height: 100%;
-	width: 100%;
-	position: fixed;
+.home-route {
+	background-color: #274046;
+	position: relative;
 }
 
 .work-route {
 	background: url(/fantasy-enduro.png) no-repeat top center;
 	background-size: cover;
+	min-height: 100vh;
+	position: relative;
 }
 
 .gold-route {
 	background: url(/gold-team.png) no-repeat top center;
 	background-size: cover;
+	min-height: 100vh;
+	position: relative;
 }

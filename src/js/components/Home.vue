@@ -1,5 +1,5 @@
 <template>
-<transition name="work-slide">
+<transition name="home-fade">
 <div class="main-wrap">
     <div class="name">
         <h1>Jack Hegman</h1>
