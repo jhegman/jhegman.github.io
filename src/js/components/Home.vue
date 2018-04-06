@@ -9,7 +9,7 @@
     <div class="background-2 layer-background"></div>
     <div class="background-3 moving">
     	<div class="container head">
-    		<img src="/headshot.png"/>
+    		<img src="img/headshot.jpg"/>
     	</div>
 	</div>
 </div><!--/main-wrap-->
