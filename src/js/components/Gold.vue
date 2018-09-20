@@ -7,14 +7,13 @@
                 <div class="project-info">
                     <div class="description">
                         <p>This is a site I built for the Sun Valley XC Gold team.  It is a wordpress site with 
-                    a custom child theme.  I am responsible for all design, hosting and maintenance.  Take a look!</p>
+                    a custom child theme.  I am responsible for all design, hosting and maintenance.</p>
                     </div>
                     <div class="details">
                         <h4>Year</h4>
                         <h5>2015</h5>
                         <h4>Client</h4>
                         <h5>Sun Valley SEF</h5>
-                        <a href="http://www.xcgold.svsef.org" class="link" target="_blank"> View Project </a>
                     </div>
                 </div>
                 <ul class="route-nav">
